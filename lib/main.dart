@@ -11,14 +11,14 @@ void main() {
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
       statusBarColor: Colors.transparent, // important
-      statusBarIconBrightness: Brightness.dark, // ANDROID
+      statusBarIconBrightness: Brightness.light, // ANDROID
       statusBarBrightness: Brightness.dark, // IOS (dark = white icons)
     ),
   );
 
   SystemChrome.setEnabledSystemUIMode(
     SystemUiMode.manual,
-    overlays: [SystemUiOverlay.bottom, SystemUiOverlay.top],
+    overlays: [SystemUiOverlay.top],
   );
 
   runApp(MyApp());
