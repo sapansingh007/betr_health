@@ -15,22 +15,50 @@ class CommunityItem extends StatelessWidget {
     return Column(
       children: [
         Container(
-          height: 60,
-          width: 60,
+          height: 64,
+          width: 64,
           decoration: BoxDecoration(
-            color: const Color(0xFF2A1846),
-            borderRadius: BorderRadius.circular(16),
+            border: Border.all(color: Color(0xFF3A255F),width: 2),
+            borderRadius: BorderRadius.circular(18),
+            gradient:  LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [
+                Color(0xFF3A255F).withOpacity(0.6),
+                Color(0xFF3A255F).withOpacity(0.6),
+                // Color(0xFF3A255F),
+                // Color(0xFF24123F),
+              ],
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.white.withOpacity(0.05),
+                blurRadius: 6,
+                offset: const Offset(-2, -2),
+              ),
+              BoxShadow(
+                color: Colors.black.withOpacity(0.35),
+                blurRadius: 10,
+                offset: const Offset(4, 6),
+              ),
+            ],
           ),
           child: Center(
-            child: Image.asset(icon, height: 30),
+            child: Image.asset(
+              icon,
+              width: 30,
+              height: 30,
+              color: Colors.white,
+            ),
           ),
         ),
-        const SizedBox(height: 6),
+        const SizedBox(height: 10),
         Text(
           label,
           style: const TextStyle(
             color: Colors.white,
             fontSize: 12,
+            fontWeight: FontWeight.w500,
           ),
         ),
       ],

@@ -33,7 +33,13 @@ class MyApp extends StatelessWidget {
       getPages: AppPages.routes,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        fontFamily: 'SFProDisplay',
+        fontFamily: 'MontserratAlternates',
+        textTheme: const TextTheme(
+          headlineLarge: TextStyle(fontWeight: FontWeight.w700),
+          headlineMedium: TextStyle(fontWeight: FontWeight.w600),
+          bodyLarge: TextStyle(fontWeight: FontWeight.w400),
+          bodyMedium: TextStyle(fontWeight: FontWeight.w400),
+        ),
         primaryColor: const Color(0xFF4A90E2),
         scaffoldBackgroundColor: Colors.white,
       ),
